@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <!-- 描述与原站逐字一致（原站该行的人名是「聂葳」，疑似模板遗留，未改动）。 -->
+    <meta
+      name="description"
+      content="聂葳的学术主页：智能体技术、大模型应用开发、计算机视觉、教育科研经历与教学作品。"
+    />
+    <title>黄俊棋 Huang JunQi · 个人主页</title>
+    <link href="assets/favicon.svg" rel="icon" type="image/svg+xml" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到正文</a>
+
+    <div id="root">
+      <!-- build-strip:start 构建时整段删除，避免成品出现一帧兜底文案闪烁 -->
+      <style>
+        /* 兜底状态下样式表还没加载，「跳到正文」会裸露在左上角，先按正式样式把它收起来 */
+        .skip-link {
+          position: fixed;
+          top: -100px;
+          left: 24px;
+        }
+      </style>
+      <!--
+        这里是 Vite 的「源入口」，不是给人双击打开的成品：
+        它引用的 /src/main.jsx 需要开发服务器现编译，浏览器直接以 file:// 打开会被 CORS 拦下，
+        表现为一片空白。所以放一段兜底提示 —— React 挂载时会把 #root 里的内容整体替换掉，
+        正常情况下这行字根本看不见；只有脚本没能运行时它才会露出来指路。
+      -->
+      <div
+        style="
+          min-height: 100vh;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 14px;
+          padding: 0 24px;
+          font-family: system-ui, -apple-system, 'Segoe UI', 'Microsoft YaHei', sans-serif;
+          background: #0f1a15;
+          color: #ece7db;
+          text-align: center;
+        "
+      >
+        <p style="margin: 0; font-size: 20px; letter-spacing: 0.04em">
+          这是源码入口，需要开发服务器才能运行
+        </p>
+        <p style="margin: 0; font-size: 15px; line-height: 1.9; color: #a3b0a8">
+          想直接双击打开看效果，请用同目录下的
+          <code style="color: #c9a86a">dist/index.html</code><br />
+          想在开发模式下预览，请在 new_自我介绍 目录执行
+          <code style="color: #c9a86a">npm run dev</code> 后访问
+          <code style="color: #c9a86a">http://localhost:5178</code>
+        </p>
+      </div>
+      <!-- build-strip:end -->
+    </div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

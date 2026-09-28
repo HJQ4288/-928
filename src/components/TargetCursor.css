@@ -1,0 +1,54 @@
+.target-cursor-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  transform: translate(-50%, -50%);
+  transition: transform 0.05s linear, opacity 0.3s ease;
+  will-change: transform;
+}
+
+.target-cursor-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  will-change: transform;
+}
+
+.target-cursor-corner {
+  position: absolute;
+  border-style: solid;
+  will-change: transform;
+  pointer-events: none;
+}
+
+.target-cursor-corner.corner-tl {
+  border-width: 2px 0 0 2px;
+  transform: translate(-50%, -50%);
+}
+
+.target-cursor-corner.corner-tr {
+  border-width: 2px 2px 0 0;
+  transform: translate(-50%, -50%);
+}
+
+.target-cursor-corner.corner-br {
+  border-width: 0 2px 2px 0;
+  transform: translate(-50%, -50%);
+}
+
+.target-cursor-corner.corner-bl {
+  border-width: 0 0 2px 2px;
+  transform: translate(-50%, -50%);
+}
